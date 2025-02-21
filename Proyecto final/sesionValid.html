@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Farmardilla</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Fondo de imagen desde una carpeta local */
+        body {
+            background: url('images/farmardilla.jpg') no-repeat center center fixed;
+            background-size:contain;
+        }
+
+        /* Ajustes del contenedor de login */
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Botón estilizado */
+        .btn-login {
+            background-color: rgba(24, 28, 240, 0.872);
+            color: white;
+        }
+    </style>
+    
+
+    
+</head>
+
+<body>
+   
+
+    <!-- Contenedor de Login -->
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="row w-100">
+            <div class="col-md-6 col-lg-4 mx-auto">
+                <div class="login-container">
+                    <h2 class="text-center mb-4">Iniciar Sesión</h2>
+                    <form onsubmit="return iniciarSesion(event)">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Usuario</label>
+                            <input type="text" class="form-control" id="username" name="username" placeholder="Introduce tu usuario" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Introduce tu contraseña" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-login w-100">Iniciar Sesión</button>
+                    </form>
+
+                    <div class="mt-3 text-center">
+                        <a href="#" class="text-decoration-none">¿Olvidaste tu contraseña?</a>
+                    </div>
+                    <div class="mt-2 text-center">
+                        <span>¿No tienes cuenta? <a href="#" class="text-decoration-none">Regístrate aquí</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-white text-center py-3" style="background-color: rgba(24, 28, 240, 0.872);">
+        <p>&copy; 2025 Claudia Zapata. Desarrollo de Sistemas UPDS. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script de Redirección -->
+    <script>
+        function iniciarSesion(event) {
+            event.preventDefault();
+            window.location.href = "indexValid.html";
+        }
+    </script>
+
+
+
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyC354TsO4EWSClQPUZbRej6bsFJ63LDTl0",
+      authDomain: "farmaciaardilla.firebaseapp.com",
+      projectId: "farmaciaardilla",
+      storageBucket: "farmaciaardilla.firebasestorage.app",
+      messagingSenderId: "781306527211",
+      appId: "1:781306527211:web:b5617e4149d81c6cadedae",
+      measurementId: "G-D350SGM3SP"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+
+
+
+</body>
+</html>
